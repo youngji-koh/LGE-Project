@@ -108,6 +108,7 @@
 ### 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
 * 사용자가 착용한 Fitbit에서 수집된 데이터를 [Web API](https://dev.fitbit.com/build/reference/web-api/)를 이용하여 다운로드 받음
 * 사용자 UID별로 하루동안 수집된 데이터가 JSON 파일로 저장되어 있음
+  * 예시: smartspeakertester1-2022-08-31.json (UID 1의 2022년 8월 31일 하루동안 수집된 데이터)
 * [intraday data](https://dev.fitbit.com/build/reference/web-api/intraday/get-activity-intraday-by-date/): 24시간 동안 수집된 시계열 데이터
   * heart-intraday: 기본적으로는 5초 주기로 수집됨
   * 그 외: 1분 주기로 수집됨
