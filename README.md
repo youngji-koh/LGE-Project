@@ -7,18 +7,26 @@
 
 ## 수집 데이터 항목
 실험 기간 동안 수집된 데이터는 아래와 같음 
-1. 스마트홈 기기에서 수집되는 스피커-사용자 대화 데이터, 사용자 음성 답변 데이터 및 가정 내 환경 데이터
-2. 사용자의 개인 모바일 기기에서 수집되는 스마트폰 사용 데이터
-3. 웨어러블 기기에서 수집되는 활동 및 생체 데이터
+1. Demographic Information
+2. 스마트홈 기기에서 수집되는 스피커-사용자 대화 데이터, 사용자 음성 답변 데이터 및 가정 내 환경 데이터
+3. 사용자의 개인 모바일 기기에서 수집되는 스마트폰 사용 데이터
+4. 웨어러블 기기에서 수집되는 활동 및 생체 데이터
 
 ---
+### 1. Demographic Information
+* 연령대, 성별, 성격 유형 등의 사용자 정보를 수집함. 
+* 수집한 항목은 다음과 같음
+  * 연령대, 성별(F/M)
+  * Big Five Inventory 10(BFI-10): 성격 유형 검사
+  * Patients Health Questionnaire-9: 정신 건강 설문(우울)
+  * Generalized Anxiety Disorder-7: 정신 건강 설문(불안 장애)
 
-### 1. 스마트홈 기기에서 수집되는 데이터
-* 스마트홈 기기에서 수집되는 데이터는 pickle 파일 형태로 저장함.
-* (스피커-사용자 대화 데이터 설명)이 JSON 파일로 저장되어 있음
-  * 데이터 파일 경로 : [Dataset/](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
-  * 예시: Speaker_conv_2022-08-31_2022-09-08.json (2022-08-31 ~ 2022-09-08 동안 수집된 스피커-사용자의 대화 )
-
+### 2. 스마트홈 기기에서 수집되는 데이터
+* 스피커와 사용자 대화 데이터가 JSON 파일로 저장되어 있음
+  * 데이터  경로: [Dataset/](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
+* 가정 내 환경 데이터는 CSV 파일로 저장되어 있음
+  * 데이터 파일 경로 : [Dataset/Sensors](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
+* 사용자의 음성 데이터는 3gp 파일로 저장되어 
 <table>
   <thead>
     <tr>
@@ -83,8 +91,8 @@
 </table>
 
 ---
-### 2. 사용자 스마트폰에서 수집되는 데이터
-* 데이터 위치 경로: [Dataset/K-Emophone Logger](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/K-Emophone%20Logger)
+### 3. 사용자 스마트폰에서 수집되는 데이터
+* 데이터 파일 경로: [Dataset/K-Emophone Logger](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/K-Emophone%20Logger)
 * 수집되는 데이터 타입 별로 csv파일 존재
 
 <table>
@@ -118,13 +126,13 @@
 
 ---
 
-### 3. 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
+### 4. 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
 * 사용자가 착용한 Fitbit에서 수집된 데이터를 [Web API](https://dev.fitbit.com/build/reference/web-api/)를 이용하여 다운로드 받음
-* 데이터 위치 경로: [Dataset/Fitbit](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Fitbit)
+* 데이터 파일 경로 : [Dataset/Fitbit](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Fitbit)
 * 사용자 UID 별로 하루동안 수집된 데이터가 JSON 파일로 저장되어 있음
   * 예시: smartspeakertester1-2022-08-31.json (UID 1의 2022년 8월 31일 하루동안 수집된 데이터)
 * [intraday data](https://dev.fitbit.com/build/reference/web-api/intraday/get-activity-intraday-by-date/): 24시간 동안 수집된 시계열 데이터
-  * heart-intraday: 기본적으로는 5초 주기로 수집됨
+  * heart-intraday: 기본적으로 5초 주기로 수집됨
   * 그 외: 1분 주기로 수집됨
   
 <table>
@@ -186,6 +194,10 @@
 
 
 ## 데이터 전처리 및 멘탈 상태 예측 모델 생성
+데이터 수집 플랫폼에서 수집된 데이터를 기반으로 정신 건강 상태(스트레스 및 긍/부정 감정)분류를 위한 모델 생성 및 검증하고자 함. 사용자 멘탈 상태 분류 모델 생성을 위해 수집된 센서 데이터에서 피처를 추출하고 사용자의 ESM 정신 건강 설문  답변(스트레스, 긍부정 질문)을 타겟 레이블로 지정함.  
+
+
+---
 
 
 ## 데이터 분석 및 모델 검증 결과
