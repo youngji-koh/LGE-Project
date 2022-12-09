@@ -7,7 +7,7 @@
 
 ## 수집 데이터 항목
 
-* **집 안에 설치된 스마트홈 기기에서 수집되는 데이터**
+### 집 안에 설치된 스마트홈 기기에서 수집되는 데이터
 
 <table>
   <thead>
@@ -72,8 +72,8 @@
   </tbody>
 </table>
 
-
-* **사용자 스마트폰에서 수집되는 데이터**
+---
+### 사용자 스마트폰에서 수집되는 데이터
 <table>
   <thead>
     <tr>
@@ -103,7 +103,13 @@
   </tbody>
 </table>
 
-* **스마트 밴드(Fitbit)에서 수집되는 데이터**
+---
+
+### 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
+* 사용자가 착용한 Fitbit에서 수집된 데이터를 [Web API](https://dev.fitbit.com/build/reference/web-api/)를 이용하여 다운로드 받음
+* 사용자 UID별로 하루동안 수집된 데이터가 JSON 파일로 저장되어 있음
+* [intrdaday data](https://dev.fitbit.com/build/reference/web-api/intraday/)는 24시간 동안 특정   수집된 시계열 데이터
+
 <table>
   <thead>
     <tr>
@@ -114,24 +120,52 @@
   </thead>
   <tbody>
     <tr>
-      <td rowspan="4">활동 및 생체 신호 데이터</td>
-      <td>활동 데이터</td>
-      <td> 움직인 시간, 움직인 거리 등</td>
+      <td rowspan="8">활동 데이터</td>
+      <td rowspan="4">움직인 시간</td>
+      <td>minutesSedentary</td>
+    </tr>
+    <tr>
+      <td>minutesLightlyActive</td>
     </tr>
      <tr>
-      <td>칼로리 데이터</td>
-      <td>소모한 칼로리 등</td>
+      <td>minutesFairlyActive</td>
+    </tr>
+     <tr>
+      <td>minitesVeryActive</td>
     </tr>
     <tr>
-      <td>수면 데이터</td>
-      <td>수면 시간, 수면 단계 등</td>
+      <td rowspan="2">움직인 거리</td>
+      <td>distance</td>
     </tr>
     <tr>
-      <td>신체 데이터</td>
-      <td>심박수</td>
+      <td>distance-intraday</td>
+    </tr>
+    <tr>
+      <td rowspan="2">걸음 수</td>
+      <td>steps</td>
+    </tr>
+    <tr>
+      <td>steps-intraday</td>
+    </tr>
+    <tr>
+      <td rowspan="2">칼로리 데이터</td>
+      <td rowspan="2">소모한 칼로리</td>
+      <td>calories</td>
+    </tr>
+    <tr>
+      <td>calories-intrday</td>
+    </tr>
+    <tr>
+      <td rowspan="2">신체 데이터</td>
+      <td rowspan="2">심박 수</td>
+      <td>heart</td>
+    </tr>
+    <tr>
+      <td>heart-intrday</td>
     </tr>
   </tbody>
 </table>
+
 
 
 ## 데이터 전처리 및 멘탈 상태 예측 모델 생성
