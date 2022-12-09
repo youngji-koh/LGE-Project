@@ -25,8 +25,12 @@
 * 스피커와 사용자 대화 데이터가 JSON 파일로 저장되어 있음
   * 데이터  경로: [Dataset/](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
 * 가정 내 환경 데이터는 CSV 파일로 저장되어 있음
+  * UID 별로 하루동안 수집된 환경데이터 저장
   * 데이터 파일 경로 : [Dataset/Sensors](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Sensors) 
-* 사용자의 음성 데이터는 3gp 파일로 저장되어 
+* 사용자의 음성 데이터는 3gp 파일로 저장되어 있음
+  * UID 별로 설문 전 2분 부터 설문 후 5분 동안의 소리를 녹음한 데이터 저장
+  * 각 파일은 1분 간격으로 나뉘어져 있음
+  * 데이터 파일 경로 : [Dataset/Voice](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Voice) 
 <table>
   <thead>
     <tr>
@@ -196,6 +200,9 @@
 ## 데이터 전처리 및 멘탈 상태 예측 모델 생성
 데이터 수집 플랫폼에서 수집된 데이터를 기반으로 정신 건강 상태(스트레스 및 긍/부정 감정)분류를 위한 모델 생성 및 검증하고자 함. 사용자 멘탈 상태 분류 모델 생성을 위해 수집된 센서 데이터에서 피처를 추출하고 사용자의 ESM 정신 건강 설문  답변(스트레스, 긍부정 질문)을 타겟 레이블로 지정함.  
 
+** Data.pkl 설명
+
+(표 여기에 추가해주세요!!)
 
 ---
 
