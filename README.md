@@ -6,8 +6,18 @@
 * 실험 대상 및 기간: KAIST 재학생 10명(여성:4, 남성: 6)을 대상으로 2022년 8월 31일 ~ 2022년 9월 8일 중 7일 간 실험을 진행함. 
 
 ## 수집 데이터 항목
+실험 기간 동안 수집된 데이터는 아래와 같음 
+1. 스마트홈 기기에서 수집되는 스피커-사용자 대화 데이터, 사용자 음성 답변 데이터 및 가정 내 환경 데이터
+2. 사용자의 개인 모바일 기기에서 수집되는 스마트폰 사용 데이터
+3. 웨어러블 기기에서 수집되는 활동 및 생체 데이터
 
-### 집 안에 설치된 스마트홈 기기에서 수집되는 데이터
+---
+
+### 1. 스마트홈 기기에서 수집되는 데이터
+* 스마트홈 기기에서 수집되는 데이터는 pickle 파일 형태로 저장함.
+* (스피커-사용자 대화 데이터 설명)이 JSON 파일로 저장되어 있음
+  * 데이터 파일 경로 : [Dataset/](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
+  * 예시: Speaker_conv_2022-08-31_2022-09-08.json (2022-08-31 ~ 2022-09-08 동안 수집된 스피커-사용자의 대화 )
 
 <table>
   <thead>
@@ -73,7 +83,10 @@
 </table>
 
 ---
-### 사용자 스마트폰에서 수집되는 데이터
+### 2. 사용자 스마트폰에서 수집되는 데이터
+* 데이터 위치 경로: [Dataset/K-Emophone Logger](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/K-Emophone%20Logger)
+* 수집되는 데이터 타입 별로 csv파일 존재
+
 <table>
   <thead>
     <tr>
@@ -105,9 +118,10 @@
 
 ---
 
-### 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
+### 3. 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
 * 사용자가 착용한 Fitbit에서 수집된 데이터를 [Web API](https://dev.fitbit.com/build/reference/web-api/)를 이용하여 다운로드 받음
-* 사용자 UID별로 하루동안 수집된 데이터가 JSON 파일로 저장되어 있음
+* 데이터 위치 경로: [Dataset/Fitbit](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Fitbit)
+* 사용자 UID 별로 하루동안 수집된 데이터가 JSON 파일로 저장되어 있음
   * 예시: smartspeakertester1-2022-08-31.json (UID 1의 2022년 8월 31일 하루동안 수집된 데이터)
 * [intraday data](https://dev.fitbit.com/build/reference/web-api/intraday/get-activity-intraday-by-date/): 24시간 동안 수집된 시계열 데이터
   * heart-intraday: 기본적으로는 5초 주기로 수집됨
