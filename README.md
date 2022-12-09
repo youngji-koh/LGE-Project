@@ -25,7 +25,7 @@
 * 스피커와 사용자 대화 데이터가 JSON 파일로 저장되어 있음
   * 데이터  경로: [Dataset/](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
 * 가정 내 환경 데이터는 CSV 파일로 저장되어 있음
-  * 데이터 파일 경로 : [Dataset/Sensors](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/) 
+  * 데이터 파일 경로 : [Dataset/Sensors](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Sensors) 
 * 사용자의 음성 데이터는 3gp 파일로 저장되어 
 <table>
   <thead>
