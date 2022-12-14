@@ -150,7 +150,7 @@
   <tbody>
     <tr>
       <td rowspan="8">활동 데이터</td>
-      <td rowspan="4">움직인 시간</td>
+      <td rowspan="4">움직인 시간 (분)</td>
       <td>minutesSedentary</td>
     </tr>
     <tr>
@@ -192,7 +192,21 @@
     <tr>
       <td>heart-intrday</td>
     </tr>
-  </tbody>
+     <tr>
+      <td rowspan="4">수면 데이터</td>
+      <td rowspan="4">수면 단계 (분)</td>
+      <td>deep</td>
+    </tr>
+     <tr>
+      <td>light</td>
+    </tr>
+     <tr>
+      <td>rem</td>
+    </tr>
+     <tr>
+      <td>wake</td>
+    </tr>
+  </body>
 </table>
 
 
