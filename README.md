@@ -196,7 +196,7 @@
 
 ### 4. 스마트 밴드([Fitbit](https://www.fitbit.com/global/kr/home))에서 수집되는 데이터
 * [Web API](https://dev.fitbit.com/build/reference/web-api/)를 활용하여 각 사용자 별 Fitbit 스마트 밴드에서 수집된 데이터를 다운
-   * 데이터 파일 경로 : [Dataset/Fitbit](https://github.com/youngji-koh/LGE-Project/tree/main/Dataset/Fitbit)
+   * 데이터 파일 경로 : Dataset/Fitbit
 * 사용자 별로 하루동안 수집된 데이터가 JSON 파일로 저장되어 있음
   * 예시: smartspeakertester1-2022-08-31.json (UID 1의 2022년 8월 31일 하루동안 수집된 데이터)
 * [intraday data](https://dev.fitbit.com/build/reference/web-api/intraday/get-activity-intraday-by-date/): 24시간 동안 수집된 시계열 데이터
@@ -284,7 +284,7 @@
   
 ### 피쳐 추출 
  * 수집된 데이터에서 추출된 피쳐는 아래 표와 같음. 
-    * 데이터 디렉토리 경로: Dataset/features.pkl
+    * 데이터 디렉토리 경로: Dataset/Data.pkl
  * 스마트 스피커 응답 데이터에서는 각 질문 대화 시간, 응답 방법(터치, 음성) 등을 피쳐로 추출함.
  * 환경 센서 데이터의 경우 설문 응답 직전 1분 동안의 평균 센서값을 사용. 
  * 설문 중 사용자 음성 녹음 데이터의 경우 설문 시작 전 1분과 설문 응답 중 오디오 데이터를 활용함. 
