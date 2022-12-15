@@ -413,16 +413,14 @@
     <td>사용자 기존 스트레스 정도(문항 총점이 13점 이상이면, 스트레스 정도가 정상이 아니라고 판단)</td>
   </tr>
   <tr>
-    <td>음성 데이터</td>
-    <td></td>
+    <td rowspan="2">음성 데이터</td>
+    <td rowspan="2">사용자 목소리</td>
     <td>before_audio</td>
-    <td>before audio 설명</td>
+    <td>설문 시작 전 1분 동안 주위 소리를 녹음한 데이터</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>after_audio</td>
-    <td>after_audio 설명 </td>
+    <td>사용자가 스피커와 대화 녹음한 데이터</td>
   </tr>
 </tbody>
 </table>
