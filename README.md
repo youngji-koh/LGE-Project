@@ -15,6 +15,7 @@
 ---
 ### 1. Demographic Information
 * 실험 전 사전 설문을 통해 연령대, 성별, 성격 유형 등의 사용자 정보를 수집함. 
+  * 데이터  경로: Dataset/user_demographics.csv
 * 수집한 항목은 다음과 같음
   * 사용자 기본 정보 
     * 연령대, 성별(F/M)
