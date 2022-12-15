@@ -23,7 +23,7 @@
 
 ### 2. 스마트홈 기기에서 수집되는 데이터
 * 스피커와 사용자 대화 데이터가 JSON 파일로 저장되어 있음
-  * 데이터  경로: Dataset/
+  * 데이터  경로: Dataset/Smartspeaker_conv/response_data_2022-08-31_2022-09-08.json
 * 가정 내 환경 데이터는 CSV 파일로 저장되어 있음
   * UID 별로 하루동안 수집된 환경데이터 저장
   * 데이터 파일 경로 : Dataset/Sensors 
@@ -96,7 +96,7 @@
 
 ---
 ### 3. 사용자 스마트폰에서 수집되는 데이터
-* 데이터 파일 경로: Dataset/K-Emophone Logger
+* 데이터 파일 경로: Dataset/K-Emophone Logger/ByCategories
 * 수집되는 데이터 타입 별로 csv파일 존재
 
 <table>
