@@ -31,11 +31,12 @@
   * 데이터  경로: Dataset/Smartspeaker_conv/response_data_2022-08-31_2022-09-08.json
 * 가정 내 환경 데이터는 CSV 파일로 저장되어 있음
   * 사용자 별로 하루 단위로 수집된 환경데이터 저장
-    * 데이터 파일 경로 : Dataset/Sensors 
+    * 데이터 파일 경로 : Dataset/Sensors
 * 사용자의 음성 데이터는 3gp 파일로 저장되어 있음
   * 사용자 별로 설문 직전 2분부터 설문 직후 5분까지의 음성 데이터를 저장함. 
   * 3gp 음성 파일은 1분 간격으로 저장
-  * 데이터 파일 경로 : Dataset/Voice 
+    * 데이터 파일 경로 : Dataset/Voice 
+    * 음성 데이터 피처 파일 경로 : Dataset/voice_data.csv
 <table>
   <thead>
     <tr>
