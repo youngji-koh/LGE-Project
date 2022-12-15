@@ -280,14 +280,13 @@
   
 ### 피쳐 추출 
  * 수집된 데이터에서 추출된 피쳐는 아래 표와 같음. 
+    * 데이터 디렉토리 경로: Dataset/features.pkl
  * 환경 및 이미지 데이터의 경우 설문 응답 전 1분 동안의 센서 값 평균 값을 사용함. 
  * 사용자 응답 녹음 데이터의 경우 설문 시작 전 1분, 설문 응답하는 시간 동안 녹음된 오디오 데이터를 활용함. 
    * 해당 데이터는 [YouTube AudioSet](https://research.google.com/audioset/) 데이터셋으로 사전 학습된 [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) 모델을 이용하여 임베딩 된 음성 정보를 피쳐로 사용함. 
  * 실험 전 사전 설문을 통해 수집한 사용자 정보(예: 사용자 연령대, 성별, 성격 유형)를 이용하였고 성별 정보의 경우 One-Hot Encoding을 적용함. 
  * 이 외에 스마트 스피커 응답 데이터에서는 각 질문 대화 시간, 응답 방법(터치, 음성) 등을 피쳐로 추출함.
 
-** 최종적으로 추출된 피쳐 종류 및 세부 사항은 다음과 같음. 
-* 데이터 디렉토리 경로: Dataset/features.pkl
 <table>
 <thead>
   <tr>
