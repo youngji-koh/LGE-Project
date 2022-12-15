@@ -95,38 +95,98 @@
 </table>
 
 ---
-### 3. 사용자 스마트폰에서 수집되는 데이터
-* 데이터 파일 경로: Dataset/K-Emophone Logger/ByCategories
-* 수집되는 데이터 타입 별로 csv파일 존재
-
-<table>
-  <thead>
-    <tr>
-      <th>카테고리</th>
-      <th>데이터 종류</th>
-      <th>데이터 필드</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="4">스마트폰 사용 데이터</td>
-      <td>사회적 상호 작용 데이터</td>
-      <td> 전화 송/수신 횟수 및 통화 시간 <br/> SMS/메신저/SNS 앱 사용 횟수 <br/> 시간 및 알림 기록(메세지 등 콘텐츠 는 저장하지 않으며, 메타 정보만 수집)</td>
-    </tr>
-     <tr>
-      <td>네트워크 및 기기 상태 데이터</td>
-      <td>와이파이/블루투스/셀룰러 데이터 연결 <br/> 데이터 송/수신 바이트 양 <br/> 전원 여부 <br/> 알림 모드 <br/> 배터리 레벨/충전 상태 여부 </td>
-    </tr>
-    <tr>
-      <td>키보드 및 미디어 데이터</td>
-      <td>키보드 종류 <br/> 입력 문자 종류 <br/> 키 간 거리 <br/> 카메라 사용 이벤트 <br/> 마이크 기록(실제 입력 정보는 수집하지 않고, 메타 정보만 수집) </td>
-    </tr>
-    <tr>
-      <td>활동 데이터</td>
-      <td>활동 타입(예: 걷기, 뛰기 등) </td>
-    </tr>
-  </tbody>
+### 3. 사용자 스마트폰 사용 데이터 
+* 사용자 스마트폰 사용 데이터는 수집 항목 카테고리 별로 csv 파일 로 저장되어 있음(16개)
+  * 데이터 디렉토리 경로: Dataset/K-Emophone Logger/ByCategories
+  
+<table style="undefined;table-layout: fixed; width: 812px">
+<colgroup>
+<col style="width: 92.88889px">
+<col style="width: 148.88889px">
+<col style="width: 246.88889px">
+<col style="width: 323.77778px">
+</colgroup>
+<thead>
+  <tr>
+    <th></th>
+    <th>카테고리</th>
+    <th>세부 카테고리</th>
+    <th>데이터 설명</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="16">스마트폰 사용 데이터</td>
+    <td rowspan="5">사회적 상호 작용 데이터</td>
+    <td>APP_USAGE_EVENT</td>
+    <td>모바일 앱 내 이벤트 발생 시간 및 유형 기록<br>- type : 앱 이벤트 타입(앱 꺼짐/켜짐 등)</td>
+  </tr>
+  <tr>
+    <td>CALL_LOG</td>
+    <td>통화 기록<br>- type : 발신/수신 여부,  수신 거부 여부 등 <br>- duration : 통화  시간</td>
+  </tr>
+  <tr>
+    <td>DEVICE_EVENT</td>
+    <td>스마트 폰 기기 이벤트 발생<br>- type : 이벤트 유형, 스크린 켜짐/꺼짐(SCREEN_OFF/SCREEN_ON) 등의 정보</td>
+  </tr>
+  <tr>
+    <td>MESSAGE</td>
+    <td>메세지 관련 정보<br>- type : 메세지 발신/수신(SENT/INBOX) 여부 </td>
+  </tr>
+  <tr>
+    <td>NOTIFICATION</td>
+    <td>어떤 종류의 알림(메세지, 전화, 에러 등)이 발생했는지 기록</td>
+  </tr>
+  <tr>
+    <td rowspan="5">네트워크 및 기기 상태</td>
+    <td>BATTERY</td>
+    <td>배터리 레벨 및 충전여부(DISCHARGING/CHARGING)</td>
+  </tr>
+  <tr>
+    <td>BLUETOOTH</td>
+    <td>블루투스 연결여부(NONE, BONDED) </td>
+  </tr>
+  <tr>
+    <td>DATA TRAFFIC</td>
+    <td>데이터 트래픽 양(rxBytes 와 txBytes 단위로 나타냄)</td>
+  </tr>
+  <tr>
+    <td>INSTALLED APP</td>
+    <td>설치된 앱 정보(id로 기록) </td>
+  </tr>
+  <tr>
+    <td>WIFI</td>
+    <td>와이파이 연결되어 있을 경우 어떤 Access Point 에 접근했는지 정보</td>
+  </tr>
+  <tr>
+    <td rowspan="2">키보드 및 미디어 데이터 </td>
+    <td>KEY_LOG</td>
+    <td>키보드 사용 시 키보드 사용 정보(키보드 종류 등) 나타냄</td>
+  </tr>
+  <tr>
+    <td>MEDIA</td>
+    <td>사진/동영상 다운로드 하였을 때, 관련 시간 및 미디어 파일 종류(gif, jpeg, png, mp4 등)를 나타냄</td>
+  </tr>
+  <tr>
+    <td rowspan="4">활동 데이터</td>
+    <td>FITNESS</td>
+    <td>사용자 걸음수, 이동 거리</td>
+  </tr>
+  <tr>
+    <td>LOCATION</td>
+    <td>사용자 현재 위치의 위도, 경도, 고도, 속도 기록</td>
+  </tr>
+  <tr>
+    <td>PHYSICAL_ACTIVITY</td>
+    <td>사용자 액티비티 유형(뛰기, 걷기, 자전거 탑승 등) </td>
+  </tr>
+  <tr>
+    <td>PHYSICAL_ACTIVITY_TRANLATION</td>
+    <td>사용자 액티비티 상태 변화를 기록(뛰기, 걷기, 자전거 탑승 등)</td>
+  </tr>
+</tbody>
 </table>
+
 
 ---
 
