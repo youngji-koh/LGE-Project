@@ -201,8 +201,20 @@ if __name__ == '__main__':
     # voice feature 사용 여부
     voice_use = False
 
-    stress_X_train_resampled, stress_y_train_resampled = smote(X, y[:, 0])
-    panas_X_train_resampled, panas_y_train_resampled = smote(X, y[:, 1])
+  
+    # predict mental status
+    phq_X_train_resampled, phq_y_train_resampled = smote(X, y[:, 0])
+    gad_X_train_resampled, gad_y_train_resampled = smote(X, y[:, 1])
+    stress_X_train_resampled, stress_y_train_resampled = smote(X, y[:, 2])
+    panas_X_train_resampled, panas_y_train_resampled = smote(X, y[:, 3])
+
+    print("=" * 60)
+    print("PHQ")
+    # predict(phq_X_train_resampled, phq_y_train_resampled)
+
+    print("=" * 60)
+    print("GAD")
+    predict(gad_X_train_resampled, gad_y_train_resampled)
 
     print("=" * 60)
     print("Stress")
@@ -211,3 +223,4 @@ if __name__ == '__main__':
     print("=" * 60)
     print("POS & NEG")
     predict(panas_X_train_resampled, panas_y_train_resampled)
+
