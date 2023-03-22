@@ -77,7 +77,7 @@ def columns_cleaning(df):
 
 
 def preprocessing(df, pre_audio, voice_audio, voice_use):
-    target_labels = ['stress_result', 'posNeg_result']
+    target_labels = ['phq2_result', 'gad2_result', 'stress_result', 'posNeg_result']
 
     # uid list
     uid_lst = df['uid'].tolist()
