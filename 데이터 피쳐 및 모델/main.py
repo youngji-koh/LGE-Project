@@ -151,9 +151,11 @@ def predict(X, y):
     cv = LeaveOneOut()
 
     # create model
-    models = [svm.SVC(kernel='rbf'), LogisticRegression(), KNeighborsClassifier(n_neighbors=2),
+#     models = [svm.SVC(kernel='rbf'), LogisticRegression(), KNeighborsClassifier(n_neighbors=2),
+#               DecisionTreeClassifier(), GaussianNB(), RandomForestClassifier(random_state=42)]
+   models = [svm.SVC(kernel='rbf'), KNeighborsClassifier(),
               DecisionTreeClassifier(), GaussianNB(), RandomForestClassifier(random_state=42)]
-
+    
     for i in models:
         model = i
         print('Model: %s' % model)
